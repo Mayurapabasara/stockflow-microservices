@@ -1,0 +1,13 @@
+flowchart LR
+    Browser[React dashboard] -->|HTTP /api| Gateway[API Gateway]
+    Gateway -->|service ID lookup| Eureka[Discovery Service / Eureka]
+    Gateway -->|lb://product-service| Product[Product Service]
+    Product --> ProductDB[(Product MySQL database)]
+    Product -. future events .-> Kafka[(Apache Kafka)]
+    Auth[Auth Service - scaffold] -. future identity .-> Gateway
+    Inventory[Inventory Service - scaffold] -. future events .-> Kafka
+    Supplier[Supplier Service - scaffold]
+    Purchase[Purchase Service - scaffold]
+    Sales[Sales Service - scaffold]
+    Notification[Notification Service - scaffold] -. future events .-> Kafka
+    Reporting[Reporting Service - scaffold] -. future events .-> Kafka
