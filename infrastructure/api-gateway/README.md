@@ -22,6 +22,8 @@ The gateway listens on <http://localhost:8080>. Its health endpoint is available
 | --- | --- |
 | `/api/auth/**` | `auth-service` |
 | `/api/products/**` | `product-service` |
+| `/api/categories/**` | `product-service` |
+| `/api/brands/**` | `product-service` |
 | `/api/inventory/**` | `inventory-service` |
 | `/api/sales/**` | `sales-service` |
 | `/api/purchases/**` | `purchase-service` |

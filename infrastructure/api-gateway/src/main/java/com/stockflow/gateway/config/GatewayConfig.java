@@ -24,6 +24,16 @@ public class GatewayConfig {
 	}
 
 	@Bean
+	RouterFunction<ServerResponse> categoryServiceRoute() {
+		return serviceRoute("product-categories", "/api/categories/**", "product-service");
+	}
+
+	@Bean
+	RouterFunction<ServerResponse> brandServiceRoute() {
+		return serviceRoute("product-brands", "/api/brands/**", "product-service");
+	}
+
+	@Bean
 	RouterFunction<ServerResponse> inventoryServiceRoute() {
 		return serviceRoute("inventory-service", "/api/inventory/**", "inventory-service");
 	}
