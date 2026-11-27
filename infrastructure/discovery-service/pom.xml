@@ -11,8 +11,8 @@
 	<groupId>com.stockflow</groupId>
 	<artifactId>discovery-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>StockFlow Discovery Service</name>
+	<description>Service registry for StockFlow microservices</description>
 	<url/>
 	<licenses>
 		<license/>
