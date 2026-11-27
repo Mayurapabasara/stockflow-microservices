@@ -1,0 +1,12 @@
+groups:
+  - name: stockflow-availability
+    rules:
+      - alert: TargetDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Prometheus target is unavailable"
+          description: "{{ $labels.job }} target {{ $labels.instance }} has been down for more than one minute."
+
