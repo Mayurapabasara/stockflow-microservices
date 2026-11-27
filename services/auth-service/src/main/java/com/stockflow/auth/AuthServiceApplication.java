@@ -1,4 +1,4 @@
-package com.stockflow.auth_service;
+package com.stockflow.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
