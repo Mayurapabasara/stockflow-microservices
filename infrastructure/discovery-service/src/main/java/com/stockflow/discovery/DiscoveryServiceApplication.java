@@ -1,8 +1,10 @@
-package com.stockflow.discovery_service;
+package com.stockflow.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
+@EnableEurekaServer
 @SpringBootApplication
 public class DiscoveryServiceApplication {
 
