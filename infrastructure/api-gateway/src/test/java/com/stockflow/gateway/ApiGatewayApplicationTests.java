@@ -1,9 +1,12 @@
-package com.stockflow.api_gateway;
+package com.stockflow.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(properties = {
+		"eureka.client.enabled=false",
+		"spring.cloud.config.enabled=false"
+})
 class ApiGatewayApplicationTests {
 
 	@Test

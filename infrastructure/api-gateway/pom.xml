@@ -11,8 +11,8 @@
 	<groupId>com.stockflow</groupId>
 	<artifactId>api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>StockFlow API Gateway</name>
+	<description>Secure entry point and service router for StockFlow microservices</description>
 	<url/>
 	<licenses>
 		<license/>
