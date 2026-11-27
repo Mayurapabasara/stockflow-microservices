@@ -11,8 +11,8 @@
 	<groupId>com.stockflow</groupId>
 	<artifactId>config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>StockFlow Config Server</name>
+	<description>Centralized configuration server for StockFlow microservices</description>
 	<url/>
 	<licenses>
 		<license/>
