@@ -5,8 +5,8 @@ The supplier service owns supplier records and their product sourcing terms: sup
 ## Run locally
 
 ```bash
-createdb stockflow_supplier
-export DB_URL=jdbc:postgresql://localhost:5432/stockflow_supplier
+createdb supplier_db
+export DB_URL=jdbc:postgresql://localhost:5432/supplier_db
 export DB_USERNAME=postgres
 export DB_PASSWORD=postgres
 ./mvnw spring-boot:run
@@ -43,7 +43,7 @@ Tests use H2 in PostgreSQL compatibility mode and execute the Flyway migrations.
 ```bash
 docker build -t stockflow/supplier-service .
 docker run --rm -p 8084:8084 \
-  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/stockflow_supplier \
+  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/supplier_db \
   -e JWT_JWK_SET_URI=http://host.docker.internal:8081/.well-known/jwks.json \
   stockflow/supplier-service
 ```
@@ -53,7 +53,7 @@ docker run --rm -p 8084:8084 \
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `SERVER_PORT` | `8084` | HTTP port |
-| `DB_URL` | `jdbc:postgresql://localhost:5432/stockflow_supplier` | PostgreSQL JDBC URL |
+| `DB_URL` | `jdbc:postgresql://localhost:5432/supplier_db` | PostgreSQL JDBC URL |
 | `DB_USERNAME` / `DB_PASSWORD` | `postgres` / `postgres` | Database credentials |
 | `JWT_JWK_SET_URI` | `http://localhost:8081/.well-known/jwks.json` | Auth service JWKS endpoint |
 | `PRODUCT_VALIDATION_ENABLED` | `false` | Enables direct Product Service validation |

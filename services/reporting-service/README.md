@@ -27,10 +27,10 @@ Report endpoints accept optional ISO-8601 `from`, `to`, `productId`, and `wareho
 
 ## Run and configuration
 
-Create PostgreSQL database `stockflow_reporting`, then run `./mvnw spring-boot:run`. Flyway creates all three read models.
+Create PostgreSQL database `report_db`, then run `./mvnw spring-boot:run`. Flyway creates all three read models.
 
 - `SERVER_PORT`: 8088.
-- `DB_URL`: jdbc:postgresql://localhost:5432/stockflow_reporting; credentials default to postgres/postgres.
+- `DB_URL`: jdbc:postgresql://localhost:5432/report_db; credentials default to postgres/postgres.
 - `JWT_JWK_SET_URI`: http://localhost:8081/.well-known/jwks.json.
 - `KAFKA_BOOTSTRAP_SERVERS`: localhost:9092.
 - `KAFKA_ENABLED=false`: disables consumers and topic provisioning.

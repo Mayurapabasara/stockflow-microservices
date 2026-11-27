@@ -5,8 +5,8 @@ The product service owns catalog products, categories, and brands. It persists c
 ## Run locally
 
 ```bash
-createdb stockflow_product
-export DB_URL=jdbc:postgresql://localhost:5432/stockflow_product
+createdb product_db
+export DB_URL=jdbc:postgresql://localhost:5432/product_db
 export DB_USERNAME=postgres
 export DB_PASSWORD=postgres
 export KAFKA_BOOTSTRAP_SERVERS=localhost:9092
@@ -43,7 +43,7 @@ The test suite covers controller delegation, service behavior, repository querie
 ```bash
 docker build -t stockflow/product-service .
 docker run --rm -p 8082:8082 \
-  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/stockflow_product \
+  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/product_db \
   -e KAFKA_BOOTSTRAP_SERVERS=host.docker.internal:9092 \
   -e JWT_JWK_SET_URI=http://host.docker.internal:8081/.well-known/jwks.json \
   stockflow/product-service
@@ -54,7 +54,7 @@ docker run --rm -p 8082:8082 \
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `SERVER_PORT` | `8082` | HTTP port |
-| `DB_URL` | `jdbc:postgresql://localhost:5432/stockflow_product` | PostgreSQL JDBC URL |
+| `DB_URL` | `jdbc:postgresql://localhost:5432/product_db` | PostgreSQL JDBC URL |
 | `DB_USERNAME` | `postgres` | Database username |
 | `DB_PASSWORD` | `postgres` | Database password |
 | `KAFKA_BOOTSTRAP_SERVERS` | `localhost:9092` | Kafka brokers |

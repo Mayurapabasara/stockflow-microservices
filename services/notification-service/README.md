@@ -4,7 +4,7 @@ Consumes inventory low-stock, completed sale, and goods receipt events; stores n
 
 ## Run
 
-Create PostgreSQL database `stockflow_notification` and run `./mvnw spring-boot:run`. Flyway creates the schema. Configure `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` (defaults: local PostgreSQL, postgres/postgres). Authentication uses `JWT_JWK_SET_URI`, default http://localhost:8081/.well-known/jwks.json.
+Create PostgreSQL database `notification_db` and run `./mvnw spring-boot:run`. Flyway creates the schema. Configure `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` (defaults: local PostgreSQL, postgres/postgres). Authentication uses `JWT_JWK_SET_URI`, default http://localhost:8081/.well-known/jwks.json.
 
 Email delivery is disabled by default. Set `MAIL_ENABLED=true`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_FROM`, and `NOTIFICATION_RECIPIENT` to enable it. Current events do not contain customer addresses, so order updates go to operations, once per received order line.
 

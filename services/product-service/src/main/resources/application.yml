@@ -4,7 +4,7 @@ spring:
   config:
     import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/stockflow_product}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/product_db}
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:postgres}
   jpa:

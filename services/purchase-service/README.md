@@ -4,7 +4,7 @@ Manages purchase orders and immutable goods receipts on port 8085. PostgreSQL st
 
 ## Run
 
-Create database `stockflow_purchase`, then run `./mvnw spring-boot:run`. Set `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` for your database (defaults: local PostgreSQL, postgres/postgres). JWT verification uses `JWT_JWK_SET_URI`, defaulting to Auth Service at `http://localhost:8081/.well-known/jwks.json`.
+Create database `purchase_db`, then run `./mvnw spring-boot:run`. Set `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` for your database (defaults: local PostgreSQL, postgres/postgres). JWT verification uses `JWT_JWK_SET_URI`, defaulting to Auth Service at `http://localhost:8081/.well-known/jwks.json`.
 
 ## API
 

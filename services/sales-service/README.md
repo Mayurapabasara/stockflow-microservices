@@ -4,7 +4,7 @@ Owns customers, draft sales orders, invoices, and payment records. Listens on po
 
 ## Run
 
-Create PostgreSQL database `stockflow_sales` and run `./mvnw spring-boot:run`. Flyway creates the tables. Configure `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` (defaults: local PostgreSQL, postgres/postgres), `JWT_JWK_SET_URI` (Auth Service at http://localhost:8081/.well-known/jwks.json), and `KAFKA_BOOTSTRAP_SERVERS` (localhost:9092).
+Create PostgreSQL database `sales_db` and run `./mvnw spring-boot:run`. Flyway creates the tables. Configure `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` (defaults: local PostgreSQL, postgres/postgres), `JWT_JWK_SET_URI` (Auth Service at http://localhost:8081/.well-known/jwks.json), and `KAFKA_BOOTSTRAP_SERVERS` (localhost:9092).
 
 ## API
 

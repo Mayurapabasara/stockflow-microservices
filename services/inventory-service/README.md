@@ -5,8 +5,8 @@ The inventory service owns warehouse stock, stock reservations, transfers, and t
 ## Run locally
 
 ```bash
-createdb stockflow_inventory
-export DB_URL=jdbc:postgresql://localhost:5432/stockflow_inventory
+createdb inventory_db
+export DB_URL=jdbc:postgresql://localhost:5432/inventory_db
 export DB_USERNAME=postgres
 export DB_PASSWORD=postgres
 export KAFKA_BOOTSTRAP_SERVERS=localhost:9092
@@ -59,7 +59,7 @@ Tests use H2 in PostgreSQL compatibility mode and execute all Flyway migrations.
 ```bash
 docker build -t stockflow/inventory-service .
 docker run --rm -p 8083:8083 \
-  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/stockflow_inventory \
+  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/inventory_db \
   -e KAFKA_BOOTSTRAP_SERVERS=host.docker.internal:9092 \
   -e JWT_JWK_SET_URI=http://host.docker.internal:8081/.well-known/jwks.json \
   stockflow/inventory-service
@@ -70,7 +70,7 @@ docker run --rm -p 8083:8083 \
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `SERVER_PORT` | `8083` | HTTP port |
-| `DB_URL` | `jdbc:postgresql://localhost:5432/stockflow_inventory` | PostgreSQL JDBC URL |
+| `DB_URL` | `jdbc:postgresql://localhost:5432/inventory_db` | PostgreSQL JDBC URL |
 | `DB_USERNAME` / `DB_PASSWORD` | `postgres` / `postgres` | Database credentials |
 | `KAFKA_BOOTSTRAP_SERVERS` | `localhost:9092` | Kafka brokers |
 | `JWT_JWK_SET_URI` | `http://localhost:8081/.well-known/jwks.json` | Auth service JWKS endpoint |

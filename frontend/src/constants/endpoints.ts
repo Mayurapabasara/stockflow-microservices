@@ -1,1 +1,21 @@
-// Placeholder for future implementation.
+export const ENDPOINTS = {
+  auth: {
+    login: '/api/auth/login',
+    register: '/api/auth/register',
+    refresh: '/api/auth/refresh',
+    logout: '/api/auth/logout',
+  },
+  products: '/api/products',
+  categories: '/api/categories',
+  brands: '/api/brands',
+  inventory: '/api/inventory',
+  warehouses: '/api/inventory/warehouses',
+  suppliers: '/api/suppliers',
+  purchases: '/api/purchases',
+  receipts: '/api/purchases/receipts',
+  sales: '/api/sales',
+  customers: '/api/sales/customers',
+  invoices: '/api/sales/invoices',
+  reports: '/api/reports',
+  notifications: '/api/notifications',
+} as const
