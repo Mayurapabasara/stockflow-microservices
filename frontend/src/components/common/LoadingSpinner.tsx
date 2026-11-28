@@ -1,1 +1,8 @@
-// Placeholder for future implementation.
+export function LoadingSpinner({ label = 'Loading' }: { label?: string }) {
+  return (
+    <div className="loading" role="status">
+      <span className="loading__spinner" aria-hidden="true" />
+      <span>{label}</span>
+    </div>
+  )
+}

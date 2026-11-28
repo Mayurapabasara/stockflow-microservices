@@ -13,8 +13,8 @@ The authentication service manages users and roles, issues RSA-signed access tok
 Create the database and provide credentials if they differ from the development defaults:
 
 ```bash
-createdb stockflow_auth
-export DB_URL=jdbc:postgresql://localhost:5432/stockflow_auth
+createdb auth_db
+export DB_URL=jdbc:postgresql://localhost:5432/auth_db
 export DB_USERNAME=postgres
 export DB_PASSWORD=postgres
 ./mvnw spring-boot:run
@@ -60,7 +60,7 @@ Tests use an in-memory H2 database and do not require PostgreSQL, Eureka, or Con
 ```bash
 docker build -t stockflow/auth-service .
 docker run --rm -p 8081:8081 \
-  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/stockflow_auth \
+  -e DB_URL=jdbc:postgresql://host.docker.internal:5432/auth_db \
   -e DB_USERNAME=postgres \
   -e DB_PASSWORD=postgres \
   stockflow/auth-service
@@ -71,7 +71,7 @@ docker run --rm -p 8081:8081 \
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `SERVER_PORT` | `8081` | HTTP port |
-| `DB_URL` | `jdbc:postgresql://localhost:5432/stockflow_auth` | PostgreSQL JDBC URL |
+| `DB_URL` | `jdbc:postgresql://localhost:5432/auth_db` | PostgreSQL JDBC URL |
 | `DB_USERNAME` | `postgres` | Database username |
 | `DB_PASSWORD` | `postgres` | Database password |
 | `CONFIG_SERVER_URL` | `http://localhost:8888` | Optional Config Server URL |
